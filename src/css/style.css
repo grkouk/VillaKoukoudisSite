@@ -7,7 +7,7 @@ body {
   opacity: 0.8; }
 
 #home-section {
-  background: url("../img/bannerbaseH700.jpg") no-repeat;
+  background: url("../img/soba1300.png") no-repeat;
   min-height: 700px;
   background-size: cover;
   background-attachment: fixed; }
@@ -30,7 +30,8 @@ body {
     border-radius: 5px;
     font-size: 30px; }
 
-#accommodation-section .fa, #share-section .fa {
+#accommodation-section .fa,
+#share-section .fa {
   color: #fff;
   background: #333;
   padding: 4px;
@@ -46,3 +47,13 @@ body {
 
 #fillRequirementsModal {
   color: black; }
+
+.home-section-padding {
+  padding-top: 100px; }
+
+.parallax-window {
+  min-height: 700px;
+  background: transparent; }
+
+.window-wrapper {
+  background: #ffffff; }

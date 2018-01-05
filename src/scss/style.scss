@@ -2,13 +2,11 @@
 @import '../../node_modules/bootstrap/scss/_functions.scss';
 @import '../../node_modules/bootstrap/scss/_variables.scss';
 @import '../../node_modules/bootstrap/scss/mixins/_breakpoints.scss';
-
 $bg-color:#333;
 $font-color:#fff;
 $primary-color: #008ed6;
 $dark-overlay:rgba(0, 0, 0, 0.2);
 $icon-size:30px;
-
 body {
     background: $bg-color;
     color: $font-color;
@@ -20,15 +18,13 @@ body {
 }
 
 #home-section {
-    background: url('../img/bannerbaseH700.jpg') no-repeat;
-   
+    background: url('../img/soba1300.png') no-repeat;
     min-height: 700px;
     background-size: cover;
     background-attachment: fixed;
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
         min-height: 1100px;
     }
-    
     .dark-overlay {
         background-color: $dark-overlay;
         position: absolute;
@@ -48,25 +44,39 @@ body {
         font-size: $icon-size;
     }
 }
-#accommodation-section, #share-section{
-    .fa{
-      color:#fff;
-      background:#333;
-      padding:4px;
-      border-radius: 5px;
-      font-size:$icon-size;
+
+#accommodation-section,
+#share-section {
+    .fa {
+        color: #fff;
+        background: #333;
+        padding: 4px;
+        border-radius: 5px;
+        font-size: $icon-size;
     }
-  }
-  
-  #activities-section{
-    .fa{
-      color:$primary-color;
-      background:#fff;
-      padding:4px;
-      border-radius:5px;
-      font-size:$icon-size;
+}
+
+#activities-section {
+    .fa {
+        color: $primary-color;
+        background: #fff;
+        padding: 4px;
+        border-radius: 5px;
+        font-size: $icon-size;
     }
-  }
-  #fillRequirementsModal{
-      color: black;
-  }
+}
+
+#fillRequirementsModal {
+    color: black;
+}
+.home-section-padding{
+    padding-top: 100px;
+}
+.parallax-window{
+    min-height: 700px;
+    background: transparent;
+}
+.window-wrapper{
+    // height: 700px;
+    background: #ffffff;
+}
