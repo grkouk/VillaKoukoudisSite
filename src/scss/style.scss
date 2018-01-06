@@ -14,28 +14,20 @@ body {
 
 .navbar {
     border-bottom: $primary-color 2px solid;
+   //color: #333;
+}
+.navbar-scrolling {
     opacity: 0.8;
 }
-
 #home-section {
-    background: url('../img/soba1300.png') no-repeat;
-    min-height: 700px;
-    background-size: cover;
-    background-attachment: fixed;
-    @include media-breakpoint-down(sm) {
-        min-height: 1100px;
-    }
-    .dark-overlay {
-        background-color: $dark-overlay;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        min-height: 700px;
-    }
-    .home-inner {
-        padding-top: 150px;
-    }
+    // background: url('../img/soba1300.png') no-repeat;
+    // min-height: 700px;
+    // background-size: cover;
+    // background-attachment: fixed;
+    // @include media-breakpoint-down(sm) {
+    //     min-height: 1100px;
+    // }
+    
     .fa {
         color: $primary-color;
         background: #fff;

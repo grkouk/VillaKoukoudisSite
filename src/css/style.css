@@ -3,32 +3,17 @@ body {
   color: #fff; }
 
 .navbar {
-  border-bottom: #008ed6 2px solid;
+  border-bottom: #008ed6 2px solid; }
+
+.navbar-scrolling {
   opacity: 0.8; }
 
-#home-section {
-  background: url("../img/soba1300.png") no-repeat;
-  min-height: 700px;
-  background-size: cover;
-  background-attachment: fixed; }
-  @media (max-width: 767.99px) {
-    #home-section {
-      min-height: 1100px; } }
-  #home-section .dark-overlay {
-    background-color: rgba(0, 0, 0, 0.2);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 700px; }
-  #home-section .home-inner {
-    padding-top: 150px; }
-  #home-section .fa {
-    color: #008ed6;
-    background: #fff;
-    padding: 4px;
-    border-radius: 5px;
-    font-size: 30px; }
+#home-section .fa {
+  color: #008ed6;
+  background: #fff;
+  padding: 4px;
+  border-radius: 5px;
+  font-size: 30px; }
 
 #accommodation-section .fa,
 #share-section .fa {
