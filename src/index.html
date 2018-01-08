@@ -8,41 +8,86 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.ico">
-    <link rel="alternate" href="http://villakoukoudis.com/"  hreflang="x-default" />
-    <link rel="alternate" href="http://villakoukoudis.com/index.html"  hreflang="en" />
+    <link rel="alternate" href="http://villakoukoudis.com/" hreflang="x-default" />
+    <link rel="alternate" href="http://villakoukoudis.com/index.html" hreflang="en" />
     <!-- <link rel="alternate" href="http://potos.tours/index.el-GR.html"  hreflang="el-GR" /> -->
     <title>Villa Koukoudis Potos Thassos</title>
     <script type="application/ld+json">
-    {
-        "@content":"http://schema.org",
-        "@type":"TravelAgency",
-        "name":"Potos.Tours",
-        "description":"Your guide to unforgettable holidays in Potos Thassos.",
-        "url": "http://potos.tours",
-        "logo": "http://potos.tours/img/potostourslogo.jpg",
-        "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "GR",
-            "postalCode": "64002",
-            "streetAddress": "Potos Thassos"
-          },
-          "publicAccess": true,
-          "availableLanguage":[
-            "English",
-            "Greek"
-          ],
-          "telephone": ["+302593053013","+306955613371"],
-          "sameAs": "http://potos.tours",
-          "email": "info@potos.tours",
-          "image": "http://potos.tours/Img/potostourslogo.jpg"
-    }
+        {
+            "@content": "http://schema.org",
+            "@type": "TravelAgency",
+            "name": "Villa Koukoudis",
+            "description": "Holliday studios and appartments in Potos Thassos.",
+            "url": "http://villakoukoudis.com",
+            "logo": "http://villakoukoudis/img/sobalogo.png",
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "GR",
+                "postalCode": "64002",
+                "streetAddress": "Potos Thassos"
+            },
+            "publicAccess": true,
+            "availableLanguage": [
+                "English",
+                "Greek"
+            ],
+            "telephone": ["+302593053013", "+306955613371"],
+            "sameAs": [
+                "https://www.facebook.com/VillaKoukoudis",
+                "https://plus.google.com/communities/115725383312694736421"
+            ],
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 40.611698,
+                "longitude": 24.607855
+            },
+            "potentialAction": {
+                "@type": "ReserveAction",
+                "target": {
+                    "@type": "EntryPoint",
+                    "urlTemplate": "http://villakoukoudis.com",
+                    "inLanguage": "en-US",
+                    "actionPlatform": [
+                        "http://schema.org/DesktopWebPlatform",
+                        "http://schema.org/IOSPlatform",
+                        "http://schema.org/AndroidPlatform"
+                    ]
+                },
+                "result": {
+                    "@type": "Reservation",
+                    "name": "Book a Room"
+                }
+                "email": "info@villakoukoudis.com",
+                "image": "http://villakoukoudis/img/sobalogo.png"
+            }
+    </script>
+    <script>
+        function displayNextImage() {
+            x = (x === images.length - 1) ? 0 : x + 1;
+            document.getElementById("img1").src = images[x];
+        }
+
+        function displayPreviousImage() {
+            x = (x <= 0) ? images.length - 1 : x - 1;
+            document.getElementById("img1").src = images[x];
+        }
+
+        function startTimer() {
+            setInterval(displayNextImage, 3000);
+        }
+
+        var images = [],
+            x = -1;
+        images[0] = "img/aliki.png";
+        images[1] = "img/giola.png";
+        images[2] = "img/katar.png";
     </script>
 </head>
 
-<body>
+<body >
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="index.html">
-            <img src="Img/SobaLogo.png" width="30" height="30" class="d-inline-block align-top" alt="Potos Tours Logo Image">Villa Koukoudis
+        <a class="navbar-brand" href="index.html#villakoukoudis-potos-thassos-home-section">
+            <img src="Img/SobaLogo.png" width="30" height="30" class="d-inline-block align-top" style="margin-right:10px" alt="Villa Koukoudis Potos Thassos Logo Image">Villa Koukoudis
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -51,13 +96,13 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#home-section">Home </a>
+                    <a class="nav-link" href="#villakoukoudis-potos-thassos-home-section">Home </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#accommodation-head-section">Accommodation</a>
+                    <a class="nav-link" href="#accommodation-potos-thassos-headsection">Accommodation</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#activities-head-section">Activities</a>
+                    <a class="nav-link" href="#activities-potos-thassos-section">Activities</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#contact-head-section">Contact</a>
@@ -69,21 +114,21 @@
                         <img class="d-inline-block align-top" src="img/fgBritish.png" />
                     </a>
                 </li>
-               
+
             </ul>
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="http://twitter.com" target="_blank">
                         <i class="fa fa-twitter"></i>
                     </a>
-                </li>
+                </li> -->
                 <li class="nav-item">
-                    <a class="nav-link" href="https://www.facebook.com/PotosTours" target="_blank">
+                    <a class="nav-link" href="https://www.facebook.com/VillaKoukoudis" target="_blank">
                         <i class="fa fa-facebook"></i>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://plus.google.com" target="_blank">
+                    <a class="nav-link" href="https://plus.google.com/communities/115725383312694736421" target="_blank">
                         <i class="fa fa-google-plus"></i>
                     </a>
                 </li>
@@ -92,15 +137,14 @@
         </div>
     </nav>
 
-    <div class="parallax-window " style="margin-top: 60px" data-parallax="scroll" data-image-src="img/soba1300.png">
+    <header id="villakoukoudis-potos-thassos-home-section" class="parallax-window " style="margin-top: 60px" data-parallax="scroll"
+        data-image-src="img/soba1300.png">
         <div class="container home-section-padding">
             <div class="row">
                 <div class="col-lg-6 col-md-6">
-                    <h3>
-                        We are your guide for your vacation in
-                        <strong>Potos Thassos</strong>.
-
-                    </h3>
+                    <h1>
+                        Villa Koukoudis in Potos Thassos
+                    </h1>
                     <div id="meetisland1" class="d-flex flex-row">
                         <div class="p-2 align-self-start">
                             <i class="fa fa-check"></i>
@@ -139,22 +183,22 @@
                             <i class="fa fa-check"></i>
                         </div>
                         <div class="p-2 align-self-end">
-                            Activities you have to try 
+                            Activities you have to try
                         </div>
                     </div>
-                    
-                    <div id="meetisland3" class="d-flex flex-row">
+
+                    <!-- <div id="meetisland3" class="d-flex flex-row">
                         <div class="p-2 align-self-start">
                             <i class="fa fa-check"></i>
                         </div>
                         <div class="p-2 align-self-end">
                             <strong>FREE of charge for you</strong>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-lg-3 col-md-3">
                     <div class="d-flex flex-row">
-                        <img id="img1" class="img-fluid" style="height:150px;" src="img/aliki.png" alt="">
+                        <img id="img1" class="img-fluid" style="height:150px;" src="img/aliki.png" alt="Aliki beach in Thassos">
                     </div>
                     <div class="d-flex flex-row">
                         <img id="img2" class="img-fluid" style="height:150px;" src="img/giola.png" alt="Giola Natural pool in Thassos">
@@ -171,22 +215,23 @@
             </div>
         </div>
 
-    </div>
-    
+    </header>
+
 
     <!--accommodation Head -->
-    <section id="accommodation-head-section">
+    <section id="accommodation-potos-thassos-headsection">
         <div class="container">
             <div class="row">
                 <div class="col text-center">
                     <div class="p-5">
-                        <h1 class="display-4">Accommodation in Potos Thassos</h1>
-                        <p class="lead">In Potos you can find all kind of accommodation. Hotels, studios, appartments, camping. We provide
-                            you with proposals about accommodation based on your requirements.
+                        <h1 class="display-4">Accommodation in Villa Koukoudis </h1>
+                        <p class="lead">In Villa Koukoudis you can find everything you expect. We are only 200m from the beach of Potos.
+                            Nearby you will find super markert, bakery and the center of the village. Although we are in
+                            the center of the village, you can enjoy your sleep without worrying about noises
 
                         </p>
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#fillRequirementsModal">
-                            Fill out your requirements form
+                            Request a quote
                         </button>
                         <!-- <a href="#" class="btn btn-outline-secondary ">Fill out your requirements form</a> -->
                     </div>
@@ -200,34 +245,58 @@
         <div class="container">
             <div class="row">
                 <div id="accommodationImage" class="col-md-6">
-                    <img src="img/accommodation.jpg" alt="Accommodation in Potos Thassos" class="img-fluid mb-3 rounded-circle">
+                    <img src="img/room3.jpg" alt="Accommodation in Villa Koukoudis Potos Thassos" class="img-fluid mb-3 rounded-circle">
                 </div>
                 <div id="accommodationDetails" class="col-md-6">
-                    <h3>Accommodation </h3>
-                    <p>We take care of everything, so you can enjoy your holidays without the hassle of meaningless details.
-                    </p>
+                    <h3>Accommodation Services </h3>
+                    <!-- <p>We take care of everything, so you can enjoy your holidays without the hassle of meaningless details.
+                    </p> -->
                     <div class="d-flex flex-row">
-                        <div class="p-1 align-self-start">
-                            <i class="fa fa-check"></i>
+                        <div class="p-1 align-self-center">
+                            <i class="fa fa-rss fa-fw"></i>
                         </div>
-                        <div class="p-1 align-self-end">
-                            Route information
+                        <div class="p-1 align-self-center">
+                            Free WiFi
                         </div>
                     </div>
                     <div class="d-flex flex-row">
-                        <div class="p-1 align-self-start">
-                            <i class="fa fa-check"></i>
+                        <div class="p-1 align-self-center">
+                            <i class="fa fa-tv fa-fw"></i>
                         </div>
-                        <div class="p-1 align-self-end">
-                            Accommodation details 
+                        <div class="p-1 align-self-center">
+                            Smart LCD TVs
                         </div>
                     </div>
                     <div class="d-flex flex-row">
-                        <div class="p-1 align-self-start">
-                            <i class="fa fa-check"></i>
+                        <div class="p-1 align-self-center">
+                            <i class="fa fa-snowflake-o fa-fw"></i>
                         </div>
-                        <div class="p-1 align-self-end">
-                            Available services
+                        <div class="p-1 align-self-center">
+                            Free Klima
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <div class="p-1 align-self-center">
+                            <img src="img/bbq40.ico" />
+                        </div>
+                        <div class="p-1 align-self-center">
+                            Barbeque
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <div class="p-1 align-self-center">
+                            <i class="fa fa-paw fa-fw"></i>
+                        </div>
+                        <div class="p-1 align-self-center">
+                            Pets are welcome
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <div class="p-1 align-self-center">
+                            <img src="img/yard.ico" />
+                        </div>
+                        <div class="p-1 align-self-center">
+                            Yard
                         </div>
                     </div>
                 </div>
@@ -236,7 +305,7 @@
     </section>
 
     <!-- ACTIVITIES HEAD -->
-    <section id="activities-head-section" class="bg-primary">
+    <section id="activities-potos-thassos-section" class="bg-primary">
         <div class="container">
             <div class="row">
                 <div class="col text-center">
@@ -270,7 +339,7 @@
                             <i class="fa fa-check"></i>
                         </div>
                         <div class="p-2 align-self-end">
-                            Greek Nights 
+                            Greek Nights
                         </div>
                     </div>
                     <div class="d-flex flex-row">
@@ -278,7 +347,7 @@
                             <i class="fa fa-check"></i>
                         </div>
                         <div class="p-2 align-self-end">
-                            Horse back riding 
+                            Horse back riding
                         </div>
                     </div>
                     <div class="d-flex flex-row">
@@ -286,7 +355,7 @@
                             <i class="fa fa-check"></i>
                         </div>
                         <div class="p-2 align-self-end">
-                            Diving, Parasailing 
+                            Diving, Parasailing
                             <button class="btn btn-link btn-sm">
                                 more...
                             </button>
@@ -297,7 +366,7 @@
                             <i class="fa fa-check"></i>
                         </div>
                         <div class="p-2 align-self-end">
-                            Boat trips, Fish trips, cruises 
+                            Boat trips, Fish trips, cruises
                         </div>
                     </div>
                     <div class="d-flex flex-row">
@@ -305,7 +374,7 @@
                             <i class="fa fa-check"></i>
                         </div>
                         <div class="p-2 align-self-end">
-                            <strong>No extra cost for you.</strong> 
+                            <strong>No extra cost for you.</strong>
                         </div>
                     </div>
                 </div>
@@ -316,116 +385,118 @@
         </div>
     </section>
 
- <!--contact Head -->
- <section id="contact-head-section" class="bg-primary">
-    <div class="container">
-        <div class="row">
-            <div class="col text-center">
-                <div class="p-5">
-                    <h1 class="display-4">Contact</h1>
-                    <p class="lead">Our contact information
-                        
-                    </p>
-                    <!-- <a href="#" class="btn btn-outline-secondary ">Fill out your requirements form</a> -->
+    <!--contact Head -->
+    <section id="contact-head-section" class="bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <div class="p-5">
+                        <h1 class="display-4">Contact</h1>
+                        <p class="lead">Our contact information
+
+                        </p>
+                        <!-- <a href="#" class="btn btn-outline-secondary ">Fill out your requirements form</a> -->
+                    </div>
                 </div>
             </div>
-        </div>
 
-    </div>
-</section>
-<!-- contact SECTION -->
-<section id="contact-section" class="bg-light text-muted py-5">
-    <div class="container">
-        <div class="row">
-            <div id="accommodationDetails" class="col-md-4">
-                <h3>Contact </h3>
-            
+        </div>
+    </section>
+    <!-- contact SECTION -->
+    <section id="contact-section" class="bg-light text-muted py-5">
+        <div class="container">
+            <div class="row">
+                <div id="accommodationDetails" class="col-md-4">
+                    <h3>Contact </h3>
+
                     <p>
                     </p>
                     <address>
-                        Potos, Thassos<br />
-                        Greece<br />
+                        Potos, Thassos
+                        <br /> Greece
+                        <br />
                         <abbr title="Phone">P:</abbr>
                         +30 2593053013
                     </address>
-        
+
                     <address>
-                        <strong>Info:</strong> <a href="mailto:info@villakoukoudis.com">info@villakoukoudis.com</a><br />
-                        <strong>Sales:</strong> <a href="mailto:sales@villakoukoudis.com">sales@villakoukoudis.com</a>
+                        <strong>Info:</strong>
+                        <a href="mailto:info@villakoukoudis.com">info@villakoukoudis.com</a>
+                        <br />
+                        <strong>Sales:</strong>
+                        <a href="mailto:sales@villakoukoudis.com">sales@villakoukoudis.com</a>
                     </address>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#facebookModal">
-                            Facebook Messenger
+                        Facebook Messenger
                     </button>
-                
-            </div>
-            
-            <div id="dvMap" class="col-md-6 img-fluid rounded" style="height:450px">
-                <!-- <img src="img/accommodation.jpg" alt="" class="img-fluid mb-3 rounded-circle"> -->
+
+                </div>
+
+                <div id="dvMap" class="col-md-6 img-fluid rounded" style="height:450px">
+                    <!-- <img src="img/accommodation.jpg" alt="" class="img-fluid mb-3 rounded-circle"> -->
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
-<!-- Modal Facebook Messenger-->
-<div class="modal fade" id="facebookModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-content">
-            <!-- <div class="modal-header">
+    <!-- Modal Facebook Messenger-->
+    <div class="modal fade" id="facebookModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <!-- <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div> -->
-            <div class="modal-body">
-                 <!-- Facebook messages div -->
-                <div class="fb-page col-md-4" 
-                    data-href="https://www.facebook.com/PotosTours/" 
-                    data-tabs="messages" 
-                    <!-- data-width="200"  -->
-                    <!-- data-height="300"  -->
-                    data-small-header="false">
-                    <div class="fb-xfbml-parse-ignore">
-                        <blockquote></blockquote>
+                <div class="modal-body">
+                    <!-- Facebook messages div -->
+                    <div class="fb-page col-md-4" data-href="https://www.facebook.com/PotosTours/" data-tabs="messages" <!-- data-width="200"
+                        -->
+                        <!-- data-height="300"  -->
+                        data-small-header="false">
+                        <div class="fb-xfbml-parse-ignore">
+                            <blockquote></blockquote>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Modal -->
-<div class="modal fade" id="fillRequirementsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Your Requirements in Accommodation</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+    <!-- Modal -->
+    <div class="modal fade" id="fillRequirementsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Your Requirements in Accommodation</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Recipient:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Message:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-            <form>
-              <div class="form-group">
-                <label for="recipient-name" class="col-form-label">Recipient:</label>
-                <input type="text" class="form-control" id="recipient-name">
-              </div>
-              <div class="form-group">
-                <label for="message-text" class="col-form-label">Message:</label>
-                <textarea class="form-control" id="message-text"></textarea>
-              </div>
-            </form>
-          </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
     </div>
-  </div>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -434,11 +505,22 @@
     <script src="js/scrollreveal.js"></script>
     <script src="js/site.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109922163-1"></script>
-   <script>
-   $('.parallax-window').parallax();
-   </script>
-   <script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112080655-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-112080655-1');
+    </script>
+
+    <script>
+        $('.parallax-window').parallax();
+    </script>
+    <script>
         window.dataLayer = window.dataLayer || [];
 
         function gtag() {
@@ -467,52 +549,128 @@
             });
         });
     </script>
-    
-     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbH6_TL15fk6BU8sNwaQtBN31lVeCLObI"></script>
-     <script type="text/javascript">
-         var markers = [{'title': 'Villa Koukoudis','lat': '40.6114292918345','lng': '24.6055099393095','description': 'Villa Koukoudis description'}];
-         window.onload = function () {
-             var mapOptions = {
-                 center: new google.maps.LatLng(markers[0].lat, markers[0].lng),
-                 zoom: 15,
-                 mapTypeId: google.maps.MapTypeId.ROADMAP
-             };
-             var infoWindow = new google.maps.InfoWindow();
-             var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
-             for (i = 0; i < markers.length; i++) {
-                 var data = markers[i]
-                 var myLatlng = new google.maps.LatLng(data.lat, data.lng);
-                 var marker = new google.maps.Marker({
-                     position: myLatlng,
-                     map: map,
-                     title: data.title
-                 });
-                 (function (marker, data) {
-                     google.maps.event.addListener(marker, "click", function (e) {
-                         infoWindow.setContent(data.description);
-                         infoWindow.open(map, marker);
-                     });
-                 })(marker, data);
-             }
-         }
-     </script>
-     <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            appId      : '95100348886',
-            xfbml      : true,
-            version    : 'v2.6'
-          });
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbH6_TL15fk6BU8sNwaQtBN31lVeCLObI"></script>
+    <script type="text/javascript">
+        var markers = [{
+            'title': 'Villa Koukoudis',
+            'lat': '40.6114292918345',
+            'lng': '24.6055099393095',
+            'description': 'Villa Koukoudis description'
+        }];
+        window.onload = function () {
+            var mapOptions = {
+                center: new google.maps.LatLng(markers[0].lat, markers[0].lng),
+                zoom: 15,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            //A solution for changing images 
+            setInterval(displayNextImage, 3000);
+
+            var infoWindow = new google.maps.InfoWindow();
+            var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
+            for (i = 0; i < markers.length; i++) {
+                var data = markers[i]
+                var myLatlng = new google.maps.LatLng(data.lat, data.lng);
+                var marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: map,
+                    title: data.title
+                });
+                (function (marker, data) {
+                    google.maps.event.addListener(marker, "click", function (e) {
+                        infoWindow.setContent(data.description);
+                        infoWindow.open(map, marker);
+                    });
+                })(marker, data);
+            }
+        }
+    </script>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '95100348886',
+                xfbml: true,
+                version: 'v2.6'
+            });
         };
-  
-        (function(d, s, id){
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) {return;}
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en-US/sdk.js";
-          fjs.parentNode.insertBefore(js, fjs);
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en-US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
-      </script>
+    </script>
+    <script>
+        window.sr = ScrollReveal({
+            reset: true
+        });
+
+        sr.reveal('.navbar', {
+            duration: 500,
+            origin: 'bottom'
+        });
+        sr.reveal('#meetisland1', {
+            duration: 1000,
+            delay: 400,
+            origin: 'left'
+        });
+        sr.reveal('#meetisland2', {
+            duration: 1000,
+            delay: 600,
+            origin: 'left'
+        });
+        sr.reveal('#meetisland3', {
+            duration: 1000,
+            delay: 600,
+            origin: 'left'
+        });
+        sr.reveal('#img1', {
+            duration: 1000,
+            delay: 1200,
+            distance: '300px',
+            origin: 'top'
+        });
+        sr.reveal('#img2', {
+            duration: 1000,
+            delay: 1600,
+            distance: '300px',
+            origin: 'bottom'
+        });
+        sr.reveal('#img3', {
+            duration: 1000,
+            delay: 2000,
+            distance: '300px',
+            origin: 'top'
+        });
+        sr.reveal('#img4', {
+            duration: 1000,
+            delay: 2400,
+            distance: '300px',
+            origin: 'bottom'
+        });
+        //Accommodation section
+        sr.reveal('#accommodationImage', {
+            duration: 3000
+            //delay: 2400,
+            //distance: '300px',
+            //opacity:0
+            //origin: 'bottom'
+        });
+        sr.reveal('#accommodationDetails', {
+            duration: 3000,
+            delay: 2000
+            //distance: '300px',
+            //opacity:0
+            //origin: 'bottom'
+        });
+    </script>
+   
 </body>
 
 </html>
