@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
+var merge = require('merge-stream');
 
 // Compile Sass & Inject Into Browser
 gulp.task('sass', function () {
@@ -10,9 +11,43 @@ gulp.task('sass', function () {
         .pipe(browserSync.stream());
 });
 
+gulp.task('toastr',function() {
+    var streams=[];
+
+    streams.push(gulp.src('node_modules/toastr/build/toastr.css')
+           .pipe(gulp.dest("src/css"))
+        );
+    streams.push(gulp.src('node_modules/toastr/build/toastr.js.map')
+    .pipe(gulp.dest("src/js"))
+    );    
+    streams.push(gulp.src('node_modules/toastr/build/toastr.min.js')
+    .pipe(gulp.dest("src/js"))
+    );    
+    return merge(streams);
+    
+});
+
+// gulp.task('daterangepicker',function() {
+//     var streams=[];
+
+//     streams.push(gulp.src('node_modules/bootstrap-daterangepicker/daterangepicker.css')
+//            .pipe(gulp.dest("src/css"))
+//         );
+//     streams.push(gulp.src('node_modules/bootstrap-daterangepicker/moment.js')
+//     .pipe(gulp.dest("src/js"))
+//     );    
+//     streams.push(gulp.src('node_modules/bootstrap-daterangepicker/daterangepicker.js')
+//     .pipe(gulp.dest("src/js"))
+//     );    
+//     return merge(streams);
+    
+// });
+
 // Move JS Files to src/js
 gulp.task('js', function () {
-    return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/jquery/dist/jquery.min.js', 'node_modules/popper.js/dist/umd/popper.min.js'])
+    return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.min.js', 
+                     'node_modules/jquery/dist/jquery.min.js', 
+                     'node_modules/popper.js/dist/umd/popper.min.js'])
         .pipe(gulp.dest("src/js"))
         .pipe(browserSync.stream());
 });
@@ -40,25 +75,8 @@ gulp.task('fa', function () {
         .pipe(gulp.dest('src/css'))
 })
 
-// //Publish task test1
-// gulp.task('package', function () {
-//     gulp.src('src/css/*.css')
-//         .pipe(gulp.dest('dist/css'))
-//     gulp.src('src/fonts/*.*')
-//         .pipe(gulp.dest('dist/fonts'))
-//     gulp.src('src/img/*.*')
-//         .pipe(gulp.dest('dist/img'))
-//     gulp.src('src/js/*.*')
-//         .pipe(gulp.dest('dist/js'))
-//     gulp.src('src/favicon.ico')
-//         .pipe(gulp.dest('dist'))
-//     gulp.src('src/index.html')
-//         .pipe(gulp.dest('dist'))
-//     gulp.src('dist/**')
-//         .pipe(gulp.dest('c:/inetpub/wwwroot/potos.tours'))
 
 
-// })
 
 
 gulp.task('default', ['js', 'serve', 'fa', 'fonts']);

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/toastr.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.ico">
     <link rel="alternate" href="http://villakoukoudis.com/" hreflang="x-default" />
@@ -61,7 +62,7 @@
                 "image": "http://villakoukoudis/img/sobalogo.png"
             }
     </script>
-    <script>
+    <!-- <script>
         function displayNextImage() {
             x = (x === images.length - 1) ? 0 : x + 1;
             document.getElementById("img1").src = images[x];
@@ -81,7 +82,7 @@
         images[0] = "img/aliki.png";
         images[1] = "img/giola.png";
         images[2] = "img/katar.png";
-    </script>
+    </script> -->
 </head>
 
 <body>
@@ -197,7 +198,7 @@
                         </div>
                     </div> -->
                 </div>
-               
+
                 <div class="col-lg-8 col-md-8">
                     <div id="myCarousel" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
@@ -210,12 +211,11 @@
                                 <img class="first-slide" src="img/katar.png" alt="First slide">
                                 <div class="container">
                                     <div class="carousel-caption text-left">
-                                        <h1>Example headline.</h1>
-                                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi
-                                            porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id
-                                            elit.</p>
+                                        <h1>Maries waterfall.</h1>
+                                        <p>Description of Maries waterfall in Thassos.
+                                        </p>
                                         <p>
-                                            <a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a>
+                                            <a class="btn btn-lg btn-primary" href="#" role="button">Request quote</a>
                                         </p>
                                     </div>
                                 </div>
@@ -224,10 +224,9 @@
                                 <img class="second-slide" src="img/giola.png" alt="Second slide">
                                 <div class="container">
                                     <div class="carousel-caption">
-                                        <h1>Another example headline.</h1>
-                                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi
-                                            porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id
-                                            elit.</p>
+                                        <h1>Giola Thassos.</h1>
+                                        <p>Description for giola natural pool.
+                                        </p>
                                         <p>
                                             <a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a>
                                         </p>
@@ -238,10 +237,9 @@
                                 <img class="third-slide" src="img/aliki.png" alt="Third slide">
                                 <div class="container">
                                     <div class="carousel-caption text-right">
-                                        <h1>One more for good measure.</h1>
-                                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi
-                                            porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id
-                                            elit.</p>
+                                        <h1>Aliki beach.</h1>
+                                        <p>Description for Aliki beach Thassos.
+                                        </p>
                                         <p>
                                             <a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a>
                                         </p>
@@ -520,72 +518,106 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Your Requirements in Accommodation</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Request a Quote</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form id="requirementsModalForm">
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                              <label for="inputEmail4">Email</label>
-                              <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                <label for="inputEmail4">Email</label>
+                                <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
+                                <div class="invalid-feedback">
+                                    Please enter a valid Email.
+                                </div>
                             </div>
                             <div class="form-group col-md-6">
-                              <label for="customerName">Name</label>
-                              <input type="text" class="form-control" id="customerName" placeholder="Name">
+                                <label for="customerName">Name</label>
+                                <input type="text" class="form-control " id="customerName" placeholder="Name" required>
+                                <div class="invalid-feedback">
+                                    Please enter your Name.
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputAddress">Address</label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
                         </div>
                         <div class="form-row">
-                            <div class="form-group col-md-6">
-                              <label for="dateFrom">From Date</label>
-                              <input type="date" class="form-control" id="dateFrom" placeholder="From Date">
-                            </div>
-                            <div class="form-group col-md-6">
-                              <label for="toDate">To Date</label>
-                              <input type="date" class="form-control" id="toDate" placeholder="To Date">
-                            </div>
-                        </div>
-
-                        <!-- <div class="form-group">
-                            <label for="inputAddress2">Address 2</label>
-                            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-                        </div> -->
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                              <label for="inputCity">City</label>
-                              <input type="text" class="form-control" id="inputCity">
-                            </div>
-                            <div class="form-group col-md-4">
-                              <label for="inputState">State</label>
-                              <select id="inputState" class="form-control">
-                                <option selected>Choose...</option>
-                                <option>...</option>
-                              </select>
+                            <div class="form-group col-md-2">
+                                <label for="inputAdults">Adults</label>
+                                <input type="number" class="form-control" id="inputAdults">
+                                <div class="invalid-feedback">
+                                    Select Adults.
+                                </div>
                             </div>
                             <div class="form-group col-md-2">
-                              <label for="inputZip">Zip</label>
-                              <input type="text" class="form-control" id="inputZip">
+                                <label for="inputChildren">Children</label>
+                                <input type="number" class="form-control" id="inputChildren">
+                                <div class="invalid-feedback">
+                                    Select Children.
+                                </div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputCity">City</label>
+                                <input type="text" class="form-control" id="inputCity">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputCountry">Country</label>
+                                <select id="inputCountry" class="form-control" required>
+                                    <option value="" selected>Choose...</option>
+                                    <option value="GR">Greece</option>
+                                    <option value="SRB">Serbia</option>
+                                    <option value="RO">Romania</option>
+                                    <option value="DE">Germany</option>
+                                    <option value="CH">Check</option>
+                                    <option value="FYROM">FYROM</option>
+                                    <option value="SL">Slovakia</option>
+                                    <option value="RUS">Rushia</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select your Country.
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group col-md-4">
+                                <label for="roomType">Room Type</label>
+                                <select id="roomType" class="form-control" required>
+                                    <option value="" selected>Choose...</option>
+                                    <option value="ST2">Studio double (2 Beds)</option>
+                                    <option value="ST3">Studio triple (3 Beds)</option>
+                                    <option value="APP4">Appartment (4 Beds)</option>
+                                    <option value="APP5">Appartment (5 Beds)</option>
+
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select a Room Type.
+                                </div>
+                            </div>
+                            <div class="form-group col-md-4" id="dateFromDiv">
+                                <label for="dateFrom">From Date</label>
+                                <input type="date" class="form-control" id="dateFrom" placeholder="From Date">
+                                <div class="invalid-feedback">
+                                    Date range error.
+                                </div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="dateTo">To Date</label>
+                                <input type="date" class="form-control" id="dateTo" placeholder="To Date">
+                                <!-- <span ></span> -->
+                                <div class="invalid-feedback">
+                                    Date range error.
+                                </div>
                             </div>
                         </div>
-                          <div class="form-group">
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" id="gridCheck">
-                              <label class="form-check-label" for="gridCheck">
-                                Check me out
-                              </label>
-                            </div>
-                          </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button id="requirementsModalSaveButton" type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
@@ -596,6 +628,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/parallax.js"></script>
     <script src="js/scrollreveal.js"></script>
+    <script src="js/toastr.min.js"></script>
     <script src="js/site.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112080655-1"></script>
@@ -612,6 +645,53 @@
 
     <script>
         $('.parallax-window').parallax();
+    </script>
+    <script>
+        function isTextFieldEmpty(fieldId) {
+            var tField = $("#" + fieldId);
+            if (tField.val() == null || tField.val() == "") {
+                var div = tField.closest("div");
+                div.addClass("has-danger");
+                return true;
+            } else {
+                var div = tField.closest("div");
+                div.removeClass("has-danger");
+                return false;
+            }
+        }
+
+        $('#requirementsModalSaveButton').on('click', function () {
+            var myForm = document.getElementById('requirementsModalForm');
+            var dateFrom = document.getElementById('dateFrom');
+            var dateTo = document.getElementById('dateTo');
+            var dateFromDiv = document.getElementById('dateFromDiv');
+            isTextFieldEmpty('customerName');
+            console.log("date From " + dateFrom.value);
+            console.log("date To " + dateTo.value);
+            //console.log("validity of date to " + dateTo.validity.checkValidity());
+            if (dateFrom.value > dateTo.value) {
+                dateFromDiv.classList.add("has-error");
+                console.log("date from is graiter then date to");
+                // dateFrom.classList.add('invalid');
+                // dateTo.classList.add('invalid');
+                // dateFrom.validity.customError=true;
+                // dateTo.validity.customError=true;
+
+
+            }
+            if (myForm.checkValidity() === false) {
+                toastr.error('Have fun storming the castle!', 'Miracle Max Says', {
+                    progressBar: true,
+                    positionClass: "toast-bottom-center"
+                });
+            } else {
+                toastr.success('Have fun storming the castle!', 'Miracle Max Says', {
+                    progressBar: true,
+                    positionClass: "toast-bottom-center"
+                });
+            }
+            myForm.classList.add('was-validated');
+        });
     </script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -658,7 +738,7 @@
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
             //A solution for changing images 
-            setInterval(displayNextImage, 3000);
+            // setInterval(displayNextImage, 3000);
 
             var infoWindow = new google.maps.InfoWindow();
             var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
