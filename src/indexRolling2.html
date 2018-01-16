@@ -141,7 +141,7 @@
         data-image-src="img/soba1300.png">
         <div class="container home-section-padding">
             <div class="row">
-                <div class="col-lg-4 col-md-4">
+                <div class="col-lg-6 col-md-6">
                     <h1>
                         Villa Koukoudis in Potos Thassos
                     </h1>
@@ -187,27 +187,33 @@
                         </div>
                     </div>
 
-                    <!-- <div id="meetisland3" class="d-flex flex-row">
-                        <div class="p-2 align-self-start">
-                            <i class="fa fa-check"></i>
-                        </div>
-                        <div class="p-2 align-self-end">
-                            <strong>FREE of charge for you</strong>
-                        </div>
-                    </div> -->
+                    
                 </div>
-                <div class="col-lg-8 col-md-8">
-                    <div class="jumbotron jumbotron-fluid" style="background-color: transparent">
+                <div class="col-lg-3 col-md-3">
+                    <div id="jumboCol1" class="jumbotron jumbotron-fluid" style="background-color: transparent">
                         <div class="container">
-                            <img class="img-fluid " src="img/giola.png" alt="Second slide">
+                            <img class="img-fluid " height="280px" width="280px" src="img/carousel/Potos.tours.jpg" alt="Second slide">
+                            <!-- //height="150px" width="150px" -->
 
+                            <h5 >Potos.Tours</h5>
+                            <p class="">Your travel partner for potos. </p>
 
-                            <h1 class="display-4">Another example headline.</h1>
-                            <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. </p>
+                            <a class="btn btn-sm btn-primary" href="http://potos.tours" target="_blank" role="button">Learn more</a>
 
-                            <a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a>
+                        </div>
+                    </div>
 
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div id="jumboCol2" class="jumbotron jumbotron-fluid" style="background-color: transparent">
+                        <div class="container">
+                            <img class="img-fluid " height="280px" width="280px" src="img/carousel/motorino.jpg" alt="Second slide">
+                            <!-- //height="150px" width="150px" -->
 
+                            <h5 >Motorino</h5>
+                            <p class="">Rent a bike in Thassos Island </p>
+
+                            <a class="btn btn-sm btn-primary" href="http://thassos-rent-a-bike.com" role="button">Learn more</a>
 
                         </div>
                     </div>
@@ -639,30 +645,32 @@
             delay: 600,
             origin: 'left'
         });
-        sr.reveal('#img1', {
+        sr.reveal('#jumboCol1', {
             duration: 1000,
             delay: 1200,
             distance: '300px',
             origin: 'top'
         });
-        sr.reveal('#img2', {
+        sr.reveal('#jumboCol2', {
             duration: 1000,
             delay: 1600,
             distance: '300px',
             origin: 'bottom'
         });
-        sr.reveal('#img3', {
-            duration: 1000,
-            delay: 2000,
-            distance: '300px',
-            origin: 'top'
-        });
-        sr.reveal('#img4', {
-            duration: 1000,
-            delay: 2400,
-            distance: '300px',
-            origin: 'bottom'
-        });
+        // sr.reveal('#img3', {
+        //     duration: 1000,
+        //     delay: 2000,
+        //     distance: '300px',
+        //     origin: 'top'
+        // });
+        // sr.reveal('#jumboCol1', {
+        //     duration: 1000,
+        //     delay: 2400,
+        //     distance: '300px',
+        //     origin: 'bottom'
+        // });
+
+
         //Accommodation section
         sr.reveal('#accommodationImage', {
             duration: 3000
