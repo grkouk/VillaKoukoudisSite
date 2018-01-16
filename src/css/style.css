@@ -1,23 +1,19 @@
 body {
   background: #333;
-  color: #fff;
-}
+  color: #fff; }
 
 .navbar {
-  border-bottom: #008ed6 2px solid;
-}
+  border-bottom: #008ed6 2px solid; }
 
 .navbar-scrolling {
-  opacity: 0.8;
-}
+  opacity: 0.8; }
 
 #home-section .fa {
   color: #008ed6;
   background: #fff;
   padding: 4px;
   border-radius: 5px;
-  font-size: 30px;
-}
+  font-size: 30px; }
 
 #accommodation-section .fa,
 #share-section .fa {
@@ -25,30 +21,24 @@ body {
   background: #333;
   padding: 4px;
   border-radius: 5px;
-  font-size: 30px;
-}
+  font-size: 30px; }
 
 #activities-section .fa {
   color: #008ed6;
   background: #fff;
   padding: 4px;
   border-radius: 5px;
-  font-size: 30px;
-}
+  font-size: 30px; }
 
 #fillRequirementsModal {
-  color: black;
-}
+  color: black; }
 
 .home-section-padding {
-  padding-top: 100px;
-}
+  padding-top: 100px; }
 
 .parallax-window {
   min-height: 700px;
-  background: transparent;
-}
+  background: transparent; }
 
 .window-wrapper {
-  background: #ffffff;
-}
+  background: #ffffff; }
