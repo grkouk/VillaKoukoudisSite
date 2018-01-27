@@ -663,7 +663,9 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button id="requirementsModalSaveButton" type="button" class="btn btn-primary">Save changes</button>
+                    <button id="requirementsModalSaveButton" type="button" class="btn btn-primary">
+                        <i id="spinIcon" class="fa fa-spinner fa-pulse" ></i>
+                    Save changes</button>
                 </div>
             </div>
         </div>
@@ -714,6 +716,8 @@
             //var recipient = button.data('whatever') // Extract info from data-* attributes
             // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
             // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+           
+           $("#spinIcon").hide();
             var dateFrom = document.getElementById('dateFrom');
             var dateTo = document.getElementById('dateTo');
             dateFrom.value=moment().format("YYYY-MM-DD");
@@ -724,6 +728,7 @@
         })
 
         $('#requirementsModalSaveButton').on('click', function () {
+           // $("#spinIcon").show();
             var myForm = document.getElementById('requirementsModalForm');
             var dateFrom = document.getElementById('dateFrom');
             var dateTo = document.getElementById('dateTo');
@@ -741,6 +746,7 @@
                 console.log("date from is graiter then date to");
             }
             if (myForm.checkValidity() === false) {
+               // $("#spinIcon").hide();
                 toastr.error('Please correct all the errors!', 'Villa Koukoudis', {
                     progressBar: true,
                     positionClass: "toast-bottom-center"
@@ -761,6 +767,7 @@
                 };
                 //var uri = 'http://localhost:60928/api/RoomQuoteRequests'
                 var uri = 'http://testapi.potos.tours/api/RoomQuoteRequests'
+                $("#spinIcon").show();
                 var formDataJSON = JSON.stringify(formData);
                 var jqxhr = $.ajax({
                     url: uri,
@@ -769,6 +776,7 @@
                     contentType: "application/json",
                     success: function () {
                         console.log("success in post call ");
+                        $("#spinIcon").hide();
                         $('#fillRequirementsModal').modal('hide')
                         toastr.success('Thank you for your request!', 'Villa Koukoudis', {
                             progressBar: true,
@@ -776,6 +784,7 @@
                         });
                     },
                     error: function () {
+                        $("#spinIcon").hide();
                         console.log("error in post call ");
                     }
                 });
