@@ -727,8 +727,14 @@
             //modal.find('.modal-body input').val(recipient)
         })
 
+var saveButtonClicked=false;
         $('#requirementsModalSaveButton').on('click', function () {
            // $("#spinIcon").show();
+           if (saveButtonClicked) {
+               console.log("Ignoring button click");
+               return;
+           }   
+saveButtonClicked=true;
             var myForm = document.getElementById('requirementsModalForm');
             var dateFrom = document.getElementById('dateFrom');
             var dateTo = document.getElementById('dateTo');
@@ -747,6 +753,7 @@
             }
             if (myForm.checkValidity() === false) {
                // $("#spinIcon").hide();
+               saveButtonClicked=false;
                 toastr.error('Please correct all the errors!', 'Villa Koukoudis', {
                     progressBar: true,
                     positionClass: "toast-bottom-center"
@@ -776,14 +783,17 @@
                     contentType: "application/json",
                     success: function () {
                         console.log("success in post call ");
+                        
                         $("#spinIcon").hide();
                         $('#fillRequirementsModal').modal('hide')
+                        saveButtonClicked=false;
                         toastr.success('Thank you for your request!', 'Villa Koukoudis', {
                             progressBar: true,
                             positionClass: "toast-bottom-center"
                         });
                     },
                     error: function () {
+                        saveButtonClicked=false;
                         $("#spinIcon").hide();
                         console.log("error in post call ");
                     }
