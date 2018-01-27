@@ -748,8 +748,11 @@
 
 
             if (dateFrom.value > dateTo.value) {
-
-                console.log("date from is graiter then date to");
+                dateFrom.setCustomValidity('From Date must be before To date');
+                dateTo.setCustomValidity('To Date must be after from date');
+            } else {
+                dateFrom.setCustomValidity('');
+                dateTo.setCustomValidity('');
             }
             if (myForm.checkValidity() === false) {
                 // $("#spinIcon").hide();
