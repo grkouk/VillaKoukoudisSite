@@ -664,8 +664,8 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button id="requirementsModalSaveButton" type="button" class="btn btn-primary">
-                        <i id="spinIcon" class="fa fa-spinner fa-pulse" ></i>
-                    Save changes</button>
+                        <i id="spinIcon" class="fa fa-spinner fa-pulse"></i>
+                        Save changes</button>
                 </div>
             </div>
         </div>
@@ -716,25 +716,25 @@
             //var recipient = button.data('whatever') // Extract info from data-* attributes
             // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
             // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-           
-           $("#spinIcon").hide();
+
+            $("#spinIcon").hide();
             var dateFrom = document.getElementById('dateFrom');
             var dateTo = document.getElementById('dateTo');
-            dateFrom.value=moment().format("YYYY-MM-DD");
-            dateTo.value=moment().add(10,'days').format("YYYY-MM-DD");
+            dateFrom.value = moment().format("YYYY-MM-DD");
+            dateTo.value = moment().add(10, 'days').format("YYYY-MM-DD");
             //var modal = $(this)
             //modal.find('.modal-title').text('New message to ' + recipient)
             //modal.find('.modal-body input').val(recipient)
         })
 
-var saveButtonClicked=false;
+        var saveButtonClicked = false;
         $('#requirementsModalSaveButton').on('click', function () {
-           // $("#spinIcon").show();
-           if (saveButtonClicked) {
-               console.log("Ignoring button click");
-               return;
-           }   
-saveButtonClicked=true;
+            // $("#spinIcon").show();
+            if (saveButtonClicked) {
+                console.log("Ignoring button click");
+                return;
+            }
+            saveButtonClicked = true;
             var myForm = document.getElementById('requirementsModalForm');
             var dateFrom = document.getElementById('dateFrom');
             var dateTo = document.getElementById('dateTo');
@@ -752,8 +752,8 @@ saveButtonClicked=true;
                 console.log("date from is graiter then date to");
             }
             if (myForm.checkValidity() === false) {
-               // $("#spinIcon").hide();
-               saveButtonClicked=false;
+                // $("#spinIcon").hide();
+                saveButtonClicked = false;
                 toastr.error('Please correct all the errors!', 'Villa Koukoudis', {
                     progressBar: true,
                     positionClass: "toast-bottom-center"
@@ -783,17 +783,17 @@ saveButtonClicked=true;
                     contentType: "application/json",
                     success: function () {
                         console.log("success in post call ");
-                        
+
                         $("#spinIcon").hide();
                         $('#fillRequirementsModal').modal('hide')
-                        saveButtonClicked=false;
+                        saveButtonClicked = false;
                         toastr.success('Thank you for your request!', 'Villa Koukoudis', {
                             progressBar: true,
                             positionClass: "toast-bottom-center"
                         });
                     },
                     error: function () {
-                        saveButtonClicked=false;
+                        saveButtonClicked = false;
                         $("#spinIcon").hide();
                         console.log("error in post call ");
                     }
