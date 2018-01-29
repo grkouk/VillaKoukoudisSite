@@ -594,14 +594,14 @@
                         <div class="form-row">
                             <div class="form-group col-md-2">
                                 <label for="inputAdults">Adults</label>
-                                <input type="number" class="form-control" id="inputAdults" required>
+                                <input type="number" class="form-control" id="inputAdults" min="1" max="10" required>
                                 <div class="invalid-feedback">
                                     Select Adults.
                                 </div>
                             </div>
                             <div class="form-group col-md-2">
                                 <label for="inputChildren">Children</label>
-                                <input type="number" class="form-control" id="inputChildren" required>
+                                <input type="number" class="form-control" id="inputChildren" min="0" max="10" required>
                                 <div class="invalid-feedback">
                                     Select Children.
                                 </div>
@@ -679,7 +679,7 @@
     <script src="js/toastr.min.js"></script>
     <script src="js/moment.min.js"></script>
     <script src="js/locales.min.js" charset="UTF-8"></script>
-    <!-- <script src="js/smtp.js"></script> -->
+    
     <script src="js/site.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112080655-1"></script>
@@ -711,103 +711,7 @@
         //         return false;
         //     }
         // }
-        $('#fillRequirementsModal').on('show.bs.modal', function (event) {
-            //var button = $(event.relatedTarget) // Button that triggered the modal
-            //var recipient = button.data('whatever') // Extract info from data-* attributes
-            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-
-            $("#spinIcon").hide();
-            var dateFrom = document.getElementById('dateFrom');
-            var dateTo = document.getElementById('dateTo');
-            dateFrom.value = moment().format("YYYY-MM-DD");
-            dateTo.value = moment().add(10, 'days').format("YYYY-MM-DD");
-            //var modal = $(this)
-            //modal.find('.modal-title').text('New message to ' + recipient)
-            //modal.find('.modal-body input').val(recipient)
-        })
-
-        var saveButtonClicked = false;
-        $('#requirementsModalSaveButton').on('click', function () {
-            // $("#spinIcon").show();
-            if (saveButtonClicked) {
-                console.log("Ignoring button click");
-                return;
-            }
-            saveButtonClicked = true;
-            var myForm = document.getElementById('requirementsModalForm');
-            var dateFrom = document.getElementById('dateFrom');
-            var dateTo = document.getElementById('dateTo');
-            var eMail = document.getElementById('inputEmail');
-            var customerName = document.getElementById('customerName');
-            var inputAdults = document.getElementById('inputAdults');
-            var inputChildren = document.getElementById('inputChildren');
-            var inputCity = document.getElementById('inputCity');
-            var inputCountry = document.getElementById('inputCountry');
-            var roomType = document.getElementById('roomType');
-
-
-            if (dateFrom.value > dateTo.value) {
-                dateFrom.setCustomValidity('From Date must be before To date');
-                dateTo.setCustomValidity('To Date must be after from date');
-            } else {
-                dateFrom.setCustomValidity('');
-                dateTo.setCustomValidity('');
-            }
-            if (myForm.checkValidity() === false) {
-                // $("#spinIcon").hide();
-                saveButtonClicked = false;
-                toastr.error('Please correct all the errors!', 'Villa Koukoudis', {
-                    progressBar: true,
-                    positionClass: "toast-bottom-center"
-                });
-            } else {
-                //Testapi varsion
-                var formData = {
-                    RequestDate: moment().format("YYYY-MM-DD"),
-                    RequesterEmail: eMail.value,
-                    RequesterName: customerName.value,
-                    Adults: inputAdults.value,
-                    Children: inputChildren.value,
-                    // City
-                    Country: inputCountry.value,
-                    RoomType: roomType.value,
-                    DateFrom: dateFrom.value,
-                    DateTo: dateTo.value
-                };
-                //var uri = 'http://localhost:60928/api/RoomQuoteRequests'
-                var uri = 'http://testapi.potos.tours/api/RoomQuoteRequests'
-                $("#spinIcon").show();
-                var formDataJSON = JSON.stringify(formData);
-                var jqxhr = $.ajax({
-                    url: uri,
-                    type: 'POST',
-                    data: formDataJSON,
-                    contentType: "application/json",
-                    success: function () {
-                        console.log("success in post call ");
-
-                        $("#spinIcon").hide();
-                        $('#fillRequirementsModal').modal('hide')
-                        saveButtonClicked = false;
-                        toastr.success('Thank you for your request!', 'Villa Koukoudis', {
-                            progressBar: true,
-                            positionClass: "toast-bottom-center"
-                        });
-                    },
-                    error: function () {
-                        saveButtonClicked = false;
-                        $("#spinIcon").hide();
-                        console.log("error in post call ");
-                    }
-                });
-
-
-
-
-            }
-            myForm.classList.add('was-validated');
-        });
+        
     </script>
     <script>
         window.dataLayer = window.dataLayer || [];
