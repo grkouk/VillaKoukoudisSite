@@ -1,17 +1,17 @@
 $('#fillRequirementsModal').on('show.bs.modal', function (event) {
-    
+
     let dateFrom = document.getElementById('dateFrom');
     let dateTo = document.getElementById('dateTo');
     let inputAdults = document.getElementById('inputAdults');
     let inputChildren = document.getElementById('inputChildren');
-    
+
     $("#spinIcon").hide();
-    
+
     dateFrom.value = moment().format("YYYY-MM-DD");
     dateTo.value = moment().add(10, 'days').format("YYYY-MM-DD");
-    inputAdults.value=1;
-    inputChildren.value=0;
-    
+    inputAdults.value = 1;
+    inputChildren.value = 0;
+
 });
 
 var saveButtonClicked = false;
@@ -83,10 +83,17 @@ $('#requirementsModalSaveButton').on('click', function () {
                     positionClass: "toast-bottom-center"
                 });
             },
-            error: function () {
+            error: function (xhr, textStatus, errorThrown) {
                 saveButtonClicked = false;
                 $("#spinIcon").hide();
+                toastr.error("There was an error with your request. Please try again later","Villa Koukoudis",{
+                    progressBar: true,
+                    positionClass: "toast-bottom-center"
+                });
                 console.log("error in post call ");
+                console.log(xhr.statusText);
+                console.log(textStatus);
+                //console.log(error);
             }
         });
 
