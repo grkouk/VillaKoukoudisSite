@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/toastr.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.ico">
     <link rel="alternate" href="http://villakoukoudis.com/" hreflang="x-default" />
@@ -16,11 +15,11 @@
     <script type="application/ld+json">
         {
             "@content": "http://schema.org",
-            "@type": "Hotel",
+            "@type": "TravelAgency",
             "name": "Villa Koukoudis",
             "description": "Holliday studios and appartments in Potos Thassos.",
             "url": "http://villakoukoudis.com",
-            "logo": "http://villakoukoudis.com/img/sobalogo.png",
+            "logo": "http://villakoukoudis/img/sobalogo.png",
             "address": {
                 "@type": "PostalAddress",
                 "addressCountry": "GR",
@@ -35,7 +34,7 @@
             "telephone": ["+302593053013", "+306955613371"],
             "sameAs": [
                 "https://www.facebook.com/VillaKoukoudis",
-                "https://plus.google.com/u/0/b/116867169178808977668/?_ga=2.246910916.1902793546.1515490354-460452581.1510253241"
+                "https://plus.google.com/communities/115725383312694736421"
             ],
             "geo": {
                 "@type": "GeoCoordinates",
@@ -57,14 +56,12 @@
                 "result": {
                     "@type": "Reservation",
                     "name": "Book a Room"
-                },
-                "petsAllowed": "True",
-                "smokingAllowed": "True",
+                }
                 "email": "info@villakoukoudis.com",
-                "image": "http://villakoukoudis.com/img/sobalogo.png"
+                "image": "http://villakoukoudis/img/sobalogo.png"
             }
     </script>
-    <!-- <script>
+    <script>
         function displayNextImage() {
             x = (x === images.length - 1) ? 0 : x + 1;
             document.getElementById("img1").src = images[x];
@@ -76,7 +73,7 @@
         }
 
         function startTimer() {
-            setInterval(displayNextImage, 5000);
+            setInterval(displayNextImage, 3000);
         }
 
         var images = [],
@@ -84,7 +81,7 @@
         images[0] = "img/aliki.png";
         images[1] = "img/giola.png";
         images[2] = "img/katar.png";
-    </script> -->
+    </script>
 </head>
 
 <body>
@@ -131,8 +128,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://plus.google.com/u/0/b/116867169178808977668/?_ga=2.246910916.1902793546.1515490354-460452581.1510253241"
-                        target="_blank">
+                    <a class="nav-link" href="https://plus.google.com/communities/115725383312694736421" target="_blank">
                         <i class="fa fa-google-plus"></i>
                     </a>
                 </li>
@@ -144,19 +140,17 @@
     <header id="villakoukoudis-potos-thassos-home-section" class="parallax-window " style="margin-top: 60px" data-parallax="scroll"
         data-image-src="img/soba1300.png">
         <div class="container home-section-padding">
-            <h1>
-                Villa Koukoudis holiday studios and appartments in Potos Thassos
-            </h1>
-
             <div class="row">
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-8 col-md-8">
+                    <h1>
+                        Villa Koukoudis in Potos Thassos
+                    </h1>
                     <div id="meetisland1" class="d-flex flex-row">
                         <div class="p-2 align-self-start">
                             <i class="fa fa-check"></i>
                         </div>
                         <div class="p-2  align-self-end">
                             <strong>Accommodation</strong> based on your requirements
-                            
                         </div>
                     </div>
                     <div id="meetisland2" class="d-flex flex-row">
@@ -194,35 +188,29 @@
                     </div>
 
                 </div>
-                <div class="col-lg-3 col-md-3">
-                    <div id="jumboCol1" class="jumbotron jumbotron-fluid" style="background-color: transparent">
-                        <div class="container">
-                            <img class="img-fluid " height="280px" width="280px" src="img/carousel/AngelikasCreations 640400.jpg" alt="Second slide">
-                            <!-- //height="150px" width="150px" -->
+                <div class="col-lg-4 col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <img class="card-img-overlay img-fluid" src="img/carousel/Potos.tours.jpg" alt="Second slide">
 
-                            <h5>Angelikas Creations</h5>
-                            <p class="">Handmade Jewelry </p>
 
-                            <a class="btn btn-sm btn-primary" href="https://angelikascreations.com" target="_blank" role="button">Learn more</a>
+                            <h5 class="card-title" >Another example headline.</h5>
+                            <p class="card-text" >Cras justo odio, dapibus ac facilisis in  </p>
+                           
+                                <a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a>
+                            
+
 
                         </div>
-                    </div>
 
+                    </div>
                 </div>
-                <div class="col-lg-3 col-md-3">
-                    <div id="jumboCol2" class="jumbotron jumbotron-fluid" style="background-color: transparent">
-                        <div class="container">
-                            <img class="img-fluid " height="280px" width="280px" src="img/carousel/motorino.jpg" alt="Second slide">
-                            <!-- //height="150px" width="150px" -->
+                
 
-                            <h5>Motorino</h5>
-                            <p class="">Rent a bike in Thassos Island </p>
-
-                            <a class="btn btn-sm btn-primary" href="http://thassos-rent-a-bike.com" target="_blank" role="button">Learn more</a>
-
-                        </div>
-                    </div>
-
+            </div>
+            <div class="row">
+                <div class="col-12">
+                        <p></p>
                 </div>
 
             </div>
@@ -246,9 +234,6 @@
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#fillRequirementsModal">
                             Request a quote
                         </button>
-                        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#fillRequirementsModal">
-                            Gallery
-                        </button> -->
                         <!-- <a href="#" class="btn btn-outline-secondary ">Fill out your requirements form</a> -->
                     </div>
                 </div>
@@ -328,7 +313,7 @@
                     <div class="p-5">
                         <h1 class="display-4">Activities in Potos Thassos</h1>
                         <p class="lead">In Potos you can find all kind of Activities. Clubbing, Boat Trips, Car Rentals, Bike Rentals.</p>
-                        <!-- <a href="#" class="btn btn-outline-light">Fill out your requirements form</a> -->
+                        <a href="#" class="btn btn-outline-light">Fill out your requirements form</a>
                     </div>
                 </div>
             </div>
@@ -339,9 +324,9 @@
     <section id="activities-section" class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-6" id="activitiesDetails">
+                <div class="col-md-6">
                     <h3>Live Your Passion</h3>
-                    <!-- <p>We make all the necessary arrangements. </p> -->
+                    <p>We make all the necessary arrangements. </p>
                     <div class="d-flex flex-row">
                         <div class="p-2 align-self-start">
                             <i class="fa fa-check"></i>
@@ -372,9 +357,9 @@
                         </div>
                         <div class="p-2 align-self-end">
                             Diving, Parasailing
-                            <!-- <button class="btn btn-link btn-sm">
+                            <button class="btn btn-link btn-sm">
                                 more...
-                            </button> -->
+                            </button>
                         </div>
                     </div>
                     <div class="d-flex flex-row">
@@ -385,16 +370,16 @@
                             Boat trips, Fish trips, cruises
                         </div>
                     </div>
-                    <!-- <div class="d-flex flex-row">
+                    <div class="d-flex flex-row">
                         <div class="p-2 align-self-start">
                             <i class="fa fa-check"></i>
                         </div>
                         <div class="p-2 align-self-end">
                             <strong>No extra cost for you.</strong>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
-                <div class="col-md-6" id="activitiesImage">
+                <div class="col-md-6">
                     <img src="img/parasail.jpg" alt="Parasailing in Potos Thassos" class="img-fluid mb-3 rounded-circle">
                 </div>
             </div>
@@ -422,7 +407,7 @@
     <section id="contact-section" class="bg-light text-muted py-5">
         <div class="container">
             <div class="row">
-                <div id="contactDetails" class="col-md-4">
+                <div id="accommodationDetails" class="col-md-4">
                     <h3>Contact </h3>
 
                     <p>
@@ -454,88 +439,7 @@
             </div>
         </div>
     </section>
-    <div class="modal fade" id="toHide" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div itemscope itemtype="http://schema.org/Hotel">
-            <a itemprop="url" href="http://villakoukoudis.com/">
-                <span itemprop="name">Villa Koukoudis Potos Thassos </span>
-            </a>
-            <img itemprop="logo" src="http://villakoukoudis.com/img/sobalogo.png" />
-            <div itemprop="description">Villa Koukoudis holiday studios and appartments in Potos Thassos.</div>
-            Amenities:
-            <span itemprop="amenityFeature" itemscope itemtype="http://schema.org/LocationFeatureSpecification">
-                <span itemprop="name">Free Wi-Fi. </span>
-            </span>
-            <span itemprop="amenityFeature" itemscope itemtype="http://schema.org/LocationFeatureSpecification">
-                <span itemprop="name">Accessible. </span>
-            </span>
-            <span itemprop="amenityFeature" itemscope itemtype="http://schema.org/LocationFeatureSpecification">
-                <span itemprop="name">Air-conditioned. </span>
-            </span>
-            <span itemprop="amenityFeature" itemscope itemtype="http://schema.org/LocationFeatureSpecification">
-                <span itemprop="name">Laundry service. </span>
-            </span>
-            <span itemprop="amenityFeature" itemscope itemtype="http://schema.org/LocationFeatureSpecification">
-                <span itemprop="name">Pet-friendly. </span>
-            </span>
-            <span itemprop="amenityFeature" itemscope itemtype="http://schema.org/LocationFeatureSpecification">
-                <span itemprop="name">Kitchen in all rooms. </span>
-            </span>
 
-            Amenities: .
-            <div>Connect with Us:
-                <a itemprop="sameAs" href="https://www.facebook.com/VillaKoukoudis">https://www.facebook.com/VillaKoukoudis</a>
-            </div>
-            <div>Phone:
-                <span itemprop="telephone">+302593053013</span>
-            </div>
-            <div>Email:
-                <span itemprop="email">info@villakoukoudis.com</span>
-            </div>
-            <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                <span itemprop="streetAddress">Potos Thassos</span>
-                <span itemprop="postalCode">64002</span>
-                <span itemprop="addressCountry">GR</span>
-            </div>
-            <a itemprop="hasMap" href="https://www.google.com/maps/place/40.611698,24.607855">
-                View Map
-            </a>
-            <div itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
-                Map Position:
-                <span itemprop="latitude">40.611698</span>,
-                <span itemprop="longitude">24.607855</span>
-
-            </div>
-            <div>Check In: 01:00 AM
-                <meta itemprop="checkinTime" content="2017-01-02T01:00+0200">
-            </div>
-            <div>Check Out: 09:00 PM
-                <meta itemprop="checkoutTime" content="2017-01-01T21:00+0200">
-            </div>
-
-
-
-            <div>
-                We are the premier choice for
-                <span itemprop="audience" itemscope itemtype="http://schema.org/PeopleAudience">
-                    <span itemprop="audienceType">Travelers</span>
-                </span>
-            </div>
-            <div>Available Language:
-                <span itemprop="availableLanguage">English</span>
-            </div>
-            <div>Star Rating:
-                <span itemprop="starRating" itemscope itemtype="http://schema.org/Rating">
-                    <span itemprop="ratingValue">4</span>
-                </span>
-            </div>
-            <div>Pets Allowed:
-                <span itemprop="petsAllowed">True</span>
-            </div>
-            <div>Smoking Allowed:
-                <span itemprop="smokingAllowed">True</span>
-            </div>
-        </div>
-    </div>
 
     <!-- Modal Facebook Messenger-->
     <div class="modal fade" id="facebookModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -570,104 +474,26 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Request a Quote</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Your Requirements in Accommodation</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form id="requirementsModalForm">
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="inputEmail">Email</label>
-                                <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
-                                <div class="invalid-feedback">
-                                    Please enter a valid Email.
-                                </div>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="customerName">Name</label>
-                                <input type="text" class="form-control " id="customerName" placeholder="Name" required>
-                                <div class="invalid-feedback">
-                                    Please enter your Name.
-                                </div>
-                            </div>
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Recipient:</label>
+                            <input type="text" class="form-control" id="recipient-name">
                         </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-2">
-                                <label for="inputAdults">Adults</label>
-                                <input type="number" class="form-control" id="inputAdults" min="1" max="10" required>
-                                <div class="invalid-feedback">
-                                    Select Adults.
-                                </div>
-                            </div>
-                            <div class="form-group col-md-2">
-                                <label for="inputChildren">Children</label>
-                                <input type="number" class="form-control" id="inputChildren" min="0" max="10" required>
-                                <div class="invalid-feedback">
-                                    Select Children.
-                                </div>
-                            </div>
-                            <div class="form-group col-md-4">
-                                <label for="inputCity">City</label>
-                                <input type="text" class="form-control" id="inputCity">
-                            </div>
-                            <div class="form-group col-md-4">
-                                <label for="inputCountry">Country</label>
-                                <select id="inputCountry" class="form-control" required>
-                                    <option value="" selected>Choose...</option>
-                                    <option value="GR">Greece</option>
-                                    <option value="SRB">Serbia</option>
-                                    <option value="RO">Romania</option>
-                                    <option value="DE">Germany</option>
-                                    <option value="CH">Check</option>
-                                    <option value="FYROM">FYROM</option>
-                                    <option value="SL">Slovakia</option>
-                                    <option value="RUS">Rushia</option>
-                                </select>
-                                <div class="invalid-feedback">
-                                    Please select your Country.
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-4">
-                                <label for="roomType">Room Type</label>
-                                <select id="roomType" class="form-control" required>
-                                    <option value="" selected>Choose...</option>
-                                    <option value="ST2">Studio double (2 Beds)</option>
-                                    <option value="ST3">Studio triple (3 Beds)</option>
-                                    <option value="APP4">Appartment (4 Beds)</option>
-                                    <option value="APP5">Appartment (5 Beds)</option>
-
-                                </select>
-                                <div class="invalid-feedback">
-                                    Please select a Room Type.
-                                </div>
-                            </div>
-                            <div class="form-group col-md-4" id="dateFromDiv">
-                                <label for="dateFrom">From Date</label>
-                                <input type="date" class="form-control" id="dateFrom" placeholder="From Date" required>
-                                <div class="invalid-feedback">
-                                    Date range error.
-                                </div>
-                            </div>
-                            <div class="form-group col-md-4">
-                                <label for="dateTo">To Date</label>
-                                <input type="date" class="form-control" id="dateTo" placeholder="To Date" required>
-                                <div class="invalid-feedback">
-                                    Date range error.
-                                </div>
-                            </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Message:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button id="requirementsModalSaveButton" type="button" class="btn btn-primary">
-                        <i id="spinIcon" class="fa fa-spinner fa-pulse"></i>
-                        Save changes</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
@@ -678,10 +504,6 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/parallax.js"></script>
     <script src="js/scrollreveal.js"></script>
-    <script src="js/toastr.min.js"></script>
-    <script src="js/moment.min.js"></script>
-    <script src="js/locales.min.js" charset="UTF-8"></script>
-    
     <script src="js/site.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112080655-1"></script>
@@ -698,22 +520,6 @@
 
     <script>
         $('.parallax-window').parallax();
-    </script>
-    <script>
-        // function isTextFieldEmpty(fieldId) {
-        //     var tField = document.getElementById(fieldId);
-        //     var $tField = $("#" + fieldId);
-        //     if ($tField.val() == null || $tField.val() == "") {
-        //         // $tField.addClass("form-control-danger");
-        //         tField.setCustomValidity('Error Message');
-        //         return true;
-        //     } else {
-        //         //$tField.removeClass("form-control-danger")
-        //         tField.setCustomValidity('');
-        //         return false;
-        //     }
-        // }
-        
     </script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -749,8 +555,8 @@
     <script type="text/javascript">
         var markers = [{
             'title': 'Villa Koukoudis',
-            'lat': '40.611698',
-            'lng': '24.607855',
+            'lat': '40.6114292918345',
+            'lng': '24.6055099393095',
             'description': 'Villa Koukoudis description'
         }];
         window.onload = function () {
@@ -760,7 +566,7 @@
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
             //A solution for changing images 
-            // setInterval(displayNextImage, 3000);
+            setInterval(displayNextImage, 3000);
 
             var infoWindow = new google.maps.InfoWindow();
             var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
@@ -820,34 +626,35 @@
             delay: 600,
             origin: 'left'
         });
-        sr.reveal('#meetisland4', {
+        sr.reveal('#meetisland3', {
             duration: 1000,
-            delay: 800,
+            delay: 600,
             origin: 'left'
         });
-        sr.reveal('#meetisland5', {
-            duration: 1000,
-            delay: 1000,
-            origin: 'left'
-        });
-        sr.reveal('#meetisland7', {
-            duration: 1000,
-            delay: 1200,
-            origin: 'left'
-        });
-        sr.reveal('#jumboCol1', {
+        sr.reveal('#img1', {
             duration: 1000,
             delay: 1200,
             distance: '300px',
             origin: 'top'
         });
-        sr.reveal('#jumboCol2', {
+        sr.reveal('#img2', {
             duration: 1000,
             delay: 1600,
             distance: '300px',
             origin: 'bottom'
         });
-
+        sr.reveal('#img3', {
+            duration: 1000,
+            delay: 2000,
+            distance: '300px',
+            origin: 'top'
+        });
+        sr.reveal('#img4', {
+            duration: 1000,
+            delay: 2400,
+            distance: '300px',
+            origin: 'bottom'
+        });
         //Accommodation section
         sr.reveal('#accommodationImage', {
             duration: 3000
@@ -858,30 +665,7 @@
         });
         sr.reveal('#accommodationDetails', {
             duration: 3000,
-            delay: 1000
-            //distance: '300px',
-            //opacity:0
-            //origin: 'bottom'
-        });
-        //Activities section
-        sr.reveal('#activitiesImage', {
-            duration: 3000
-            //delay: 2400,
-            //distance: '300px',
-            //opacity:0
-            //origin: 'bottom'
-        });
-        sr.reveal('#activitiesDetails', {
-            duration: 3000,
-            delay: 1000
-            //distance: '300px',
-            //opacity:0
-            //origin: 'bottom'
-        });
-        //Contact section
-        sr.reveal('#contactDetails', {
-            duration: 3000,
-            delay: 500
+            delay: 2000
             //distance: '300px',
             //opacity:0
             //origin: 'bottom'
