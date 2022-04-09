@@ -15,7 +15,7 @@
     "popper.js": "^1.12.9",
     "bootstrap-daterangepicker": "^2.1.30",
     "toastr": "^2.1.4",
-    "moment": "^2.20.1"
+    "moment": "^2.29.2"
   },
   "devDependencies": {
     "babel-eslint": "8.2.1",
